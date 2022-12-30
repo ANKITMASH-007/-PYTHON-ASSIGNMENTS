@@ -1,0 +1,13 @@
+f1=open('testfile1.txt','w+')
+f1.write('Jack said,"Hello Pune"')
+f1.seek(0)
+d=f1.read()
+print(d)
+f1.close()
+f2=open('testfile1.txt','w+')
+f2.write(d.replace('"','\\"'))
+f2.seek(0)
+d2=f2.read()
+print(d2)
+f1.close()
+
